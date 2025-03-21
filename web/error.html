@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Problem Occurred!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #FFEBEE;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .error-image {
+            max-width: 600px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        h1 {
+            color: #B71C1C;
+            font-size: 2.5em;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: blink 1s ease-in-out infinite;
+        }
+
+        .home-button {
+            padding: 15px 30px;
+            background-color: #B71C1C;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #8B0000;
+            transform: scale(1.1);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Houston, We Got a Problem !!!</h1>
+    <img class="error-image" src="https://klizos.com/wp-content/uploads/funny-404-error-page-GIF-klizo-solutions.gif" alt="Error GIF" loop>
+    <p style="color: #4A4A4A; font-size: 1.2em; margin-top: 20px;">Don't panic! Our team is working hard to fix this</p>
+    <a href="index.html" class="home-button">Back to Safety</a>
+</body>
+</html>

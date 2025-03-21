@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Değişen Manzara Resimleri</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <h2>Manzara Resimleri</h2>
+    <img id="manzaraResmi" src="" alt="Rastgele Manzara">
+
+    <script>
+        function rastgeleResimSec() {
+            // Rastgele resim boyutu seç (1000-2000 arası)
+            const genislik = Math.floor(Math.random() * 1000) + 1000;
+            const yukseklik = Math.floor(Math.random() * 800) + 600;
+            
+            // Lorem Picsum üzerinden rastgele resim URL'si oluştur
+            return `https://picsum.photos/${genislik}/${yukseklik}?random=${Math.random()}`;
+        }
+
+        function resmiDegistir() {
+            const resimElementi = document.getElementById('manzaraResmi');
+            resimElementi.src = rastgeleResimSec();
+        }
+
+        // Sayfa yüklendiğinde ilk resmi yükle
+        resmiDegistir();
+        
+        // Her 60 saniyede bir resmi değiştir
+        setInterval(resmiDegistir, 60000);
+    </script>
+</body>
+</html>
